@@ -9,7 +9,7 @@ function Editblog(){
   const navigate = useNavigate()
   const[blog,setblog] = useState({})
   const fetchblog = async() =>{
- const response = await axios.get("http://localhost:3000/blog/"+id)
+ const response = await axios.get("https://mern-node-uezz.onrender.com/"+id)
  setblog(response.data.data)
  setdata({
   title:response.data.data.title || "",
@@ -43,7 +43,7 @@ setdata({
 
 const submitblog = async(e)=>{
    e.preventDefault()
-  const response = await axios.patch("http://localhost:3000/blog/"+id,data,{
+  const response = await axios.patch("https://mern-node-uezz.onrender.com/"+id,data,{
     headers:{
       "Content-Type" : "multipart/form-data"
     }

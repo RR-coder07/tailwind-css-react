@@ -32,7 +32,7 @@ const navigate = useNavigate()
 const submitblog = async(e)=>{
   e.preventDefault() // prevent the page from loading
   console.log("form submitted")
-  const response = await axios.post("http://localhost:3000/blog/" ,data, {
+  const response = await axios.post("https://mern-node-uezz.onrender.com/" ,data, {
     headers: {
         "Content-Type": "multipart/form-data"
     }

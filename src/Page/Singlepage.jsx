@@ -8,7 +8,7 @@ function Singlepage(){
     const navigate = useNavigate()
     const[blog,setblog] = useState({})
 const fetchsingleblog = async () =>{
-const response = await axios.get("http://localhost:3000/blog/" + id)
+const response = await axios.get("https://mern-node-uezz.onrender.com/blog/" + id)
 setblog(response.data.data)
 
 }
@@ -18,7 +18,7 @@ fetchsingleblog()
     },[])
 
  const deleteblog = async()=>{
-    const response =await axios.delete("http://localhost:3000/blog/" + id)
+    const response =await axios.delete("https://mern-node-uezz.onrender.com/blog/" + id)
     console.log(response.status)
     if(response.status === 200){
 alert("blog deleted successfully")

@@ -8,7 +8,7 @@ import Card from "../Component/Card";
 function Homepage(){
     const[blogs,setblogs] = useState([])
 const fetchblogs= async() =>{
-    const response = await axios.get("http://localhost:3000/blog")
+    const response = await axios.get("https://mern-node-uezz.onrender.com/blog")
  setblogs(response.data.data)
 }
 
